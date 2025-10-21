@@ -1,14 +1,16 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
+import { ukLocations, seoServiceTypes } from "@/data/programmatic-seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
   const lastModified = new Date();
 
-  const routes = [
+  // Static routes
+  const staticRoutes = [
     "",
     "/results",
-    "/pricing", 
+    "/pricing",
     "/check-availability",
     "/thank-you",
     "/privacy",
@@ -16,7 +18,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/seo-services",
   ];
 
-  return routes.map((route) => ({
+  // Generate programmatic routes
+  const programmaticRoutes: string[] = [];
+
+  // Location-only pages: /seo-services/london
+  ukLocations.forEach((location) => {
+    programmaticRoutes.push(`/seo-services/${location}`);
+  });
+
+  // Service + Location pages: /seo-services/local-seo/london
+  seoServiceTypes.forEach((service) => {
+    ukLocations.forEach((location) => {
+      programmaticRoutes.push(`/seo-services/${service}/${location}`);
+    });
+  });
+
+  // Combine all routes
+  const allRoutes = [...staticRoutes, ...programmaticRoutes];
+
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified,
     changeFrequency: route === "" ? "weekly" : "monthly",
