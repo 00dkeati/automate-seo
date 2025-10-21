@@ -10,7 +10,7 @@ export const siteConfig = {
   contact: {
     email: "sales@automateseo.co",
     whatsapp: process.env.WHATSAPP_NUMBER || "+447810666662",
-    bookingUrl: process.env.BOOKING_URL || "https://calendly.com/automateseo/15min",
+    bookingUrl: process.env.BOOKING_URL || "https://calendly.com/deankeatingpf/30min",
   },
   pricing: {
     basePrice: 1000,
