@@ -1,4 +1,5 @@
 // Programmatic SEO data for UK locations and SEO services
+// Start with top 20 locations for testing
 export const ukLocations = [
   // Major cities
   "london", "manchester", "birmingham", "leeds", "glasgow", "edinburgh", 
@@ -7,7 +8,7 @@ export const ukLocations = [
   "southampton", "portsmouth", "derby", "brighton", "norwich", "swansea",
   "exeter", "york", "bath", "cambridge", "oxford", "canterbury",
   
-  // Counties/Regions (high search volume)
+  // High-search-volume counties
   "sussex", "hampshire", "kent", "essex", "surrey", "berkshire", "buckinghamshire",
   "hertfordshire", "bedfordshire", "cambridgeshire", "norfolk", "suffolk",
   "devon", "cornwall", "somerset", "dorset", "wiltshire", "gloucestershire",
@@ -21,16 +22,12 @@ export const ukLocations = [
   // Popular areas
   "cotswolds", "lake-district", "peak-district", "new-forest", "south-downs",
   "norfolk-broads", "yorkshire-dales", "north-york-moors", "exmoor", "dartmoor"
-];
+].slice(0, 20); // Start with top 20 for testing
 
 export const seoServiceTypes = [
   "local-seo", "ecommerce-seo", "saas-seo", "lawyer-seo", "dentist-seo",
-  "plumber-seo", "restaurant-seo", "hotel-seo", "fitness-seo", "beauty-seo",
-  "auto-repair-seo", "real-estate-seo", "accountant-seo", "consultant-seo",
-  "contractor-seo", "electrician-seo", "hvac-seo", "landscaping-seo",
-  "cleaning-seo", "moving-seo", "insurance-seo", "financial-seo",
-  "healthcare-seo", "education-seo", "retail-seo", "manufacturing-seo"
-];
+  "plumber-seo", "restaurant-seo", "hotel-seo", "fitness-seo", "beauty-seo"
+].slice(0, 10); // Start with top 10 services for testing
 
 export const locationDisplayNames = {
   "london": "London",
