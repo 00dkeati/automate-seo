@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "AutomateSEO.co",
+  version: "2.0.0", // Force rebuild
   description: "We build you a 1,000+ page SEO engine that ranks for every 'service + town' search. One-off £1,000 + VAT.",
   url: "https://www.automateseo.co",
   ogImage: "/og-default.jpg",
