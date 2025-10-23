@@ -75,3 +75,4 @@ export function SerpMock({ className }: SerpMockProps) {
     </Card>
   );
 }
+

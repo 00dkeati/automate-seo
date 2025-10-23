@@ -50,3 +50,4 @@ export function MetaPixel({ pixelId }: MetaPixelProps) {
     </Script>
   );
 }
+

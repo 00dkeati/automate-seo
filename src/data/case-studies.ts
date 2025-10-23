@@ -75,3 +75,4 @@ export const testimonials = [
 
 export type CaseStudy = typeof caseStudies[number];
 export type Testimonial = typeof testimonials[number];
+

@@ -33,3 +33,4 @@ export function Testimonial({ name, business, town, quote, rating }: Testimonial
     </Card>
   );
 }
+

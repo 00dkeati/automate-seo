@@ -46,3 +46,4 @@ export function Steps({ steps }: StepsProps) {
     </div>
   );
 }
+
