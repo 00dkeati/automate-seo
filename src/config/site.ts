@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "AutomateSEO.co",
   description: "We build you a 1,000+ page SEO engine that ranks for every 'service + town' search. One-off £1,000 + VAT.",
-  url: "https://automateseo.co",
+  url: "https://www.automateseo.co",
   ogImage: "/og-default.jpg",
   links: {
     twitter: "https://twitter.com/automateseo",
