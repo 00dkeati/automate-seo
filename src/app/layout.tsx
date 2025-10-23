@@ -14,10 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    // template: `%s | ${siteConfig.name}`, // Temporarily disabled to fix duplication
-  },
+  title: siteConfig.name,
   description: siteConfig.description,
   keywords: [
     "programmatic SEO",
