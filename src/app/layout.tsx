@@ -14,7 +14,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
+  title: {
+    default: siteConfig.name,
+    template: "%s",
+  },
   description: siteConfig.description,
   keywords: [
     "programmatic SEO",
