@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     return {
-      title: `Best SEO Services in ${locationName} | AutomateSEO.co`,
+      title: `Best SEO Services in ${locationName}`,
       description: `Professional SEO services in ${locationName}. We help businesses in ${locationName} rank higher on Google with our proven programmatic SEO approach.`,
       alternates: {
         canonical: `${siteConfig.url}/seo-services/${location}`,
@@ -82,7 +82,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     return {
-      title: `${serviceName} Services in ${locationName} | AutomateSEO.co`,
+      title: `${serviceName} Services in ${locationName}`,
       description: `Expert ${serviceName} services for businesses in ${locationName}. Boost your online visibility and attract more local customers with our programmatic SEO solutions.`,
       alternates: {
         canonical: `${siteConfig.url}/seo-services/${service}/${location}`,
