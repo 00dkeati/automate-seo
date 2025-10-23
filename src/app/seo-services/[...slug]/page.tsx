@@ -47,24 +47,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     
     if (!locationName) {
       return {
-        title: "SEO Services | AutomateSEO.co",
+        title: "SEO Services",
         description: "Professional SEO services across the UK.",
       };
     }
 
     return {
-      title: `Best SEO Services in ${locationName} | AutomateSEO.co`,
+      title: `Best SEO Services in ${locationName}`,
       description: `Professional SEO services in ${locationName}. We help businesses in ${locationName} rank higher on Google with our proven programmatic SEO approach.`,
       alternates: {
         canonical: `${siteConfig.url}/seo-services/${location}`,
       },
       openGraph: {
-        title: `Best SEO Services in ${locationName} | AutomateSEO.co`,
+        title: `Best SEO Services in ${locationName}`,
         description: `Professional SEO services in ${locationName}. We help businesses in ${locationName} rank higher on Google with our proven programmatic SEO approach.`,
         url: `${siteConfig.url}/seo-services/${location}`,
       },
       twitter: {
-        title: `Best SEO Services in ${locationName} | AutomateSEO.co`,
+        title: `Best SEO Services in ${locationName}`,
         description: `Professional SEO services in ${locationName}. We help businesses in ${locationName} rank higher on Google with our proven programmatic SEO approach.`,
       },
     };
@@ -76,31 +76,31 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     
     if (!serviceName || !locationName) {
       return {
-        title: "SEO Services | AutomateSEO.co",
+        title: "SEO Services",
         description: "Professional SEO services across the UK.",
       };
     }
 
     return {
-      title: `${serviceName} Services in ${locationName} | AutomateSEO.co`,
+      title: `${serviceName} Services in ${locationName}`,
       description: `Expert ${serviceName} services for businesses in ${locationName}. Boost your online visibility and attract more local customers with our programmatic SEO solutions.`,
       alternates: {
         canonical: `${siteConfig.url}/seo-services/${service}/${location}`,
       },
       openGraph: {
-        title: `${serviceName} Services in ${locationName} | AutomateSEO.co`,
+        title: `${serviceName} Services in ${locationName}`,
         description: `Expert ${serviceName} services for businesses in ${locationName}. Boost your online visibility and attract more local customers with our programmatic SEO solutions.`,
         url: `${siteConfig.url}/seo-services/${service}/${location}`,
       },
       twitter: {
-        title: `${serviceName} Services in ${locationName} | AutomateSEO.co`,
+        title: `${serviceName} Services in ${locationName}`,
         description: `Expert ${serviceName} services for businesses in ${locationName}. Boost your online visibility and attract more local customers with our programmatic SEO solutions.`,
       },
     };
   }
 
   return {
-    title: "SEO Services | AutomateSEO.co",
+    title: "SEO Services",
     description: "Professional SEO services across the UK.",
   };
 }
