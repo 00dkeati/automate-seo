@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,7 +23,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-3">
+          <Image
+            src={siteConfig.logo}
+            alt={siteConfig.name}
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
           <span className="text-xl font-bold text-primary">
             {siteConfig.name}
           </span>

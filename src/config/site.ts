@@ -1,9 +1,10 @@
 export const siteConfig = {
   name: "AutomateSEO.co",
-  version: "2.1.0", // Force fresh build to regenerate all static pages
+  version: "2.2.0", // Add logo to website
   description: "We build you a 1,000+ page SEO engine that ranks for every 'service + town' search. One-off £1,000 + VAT.",
   url: "https://www.automateseo.co",
   ogImage: "/og-default.jpg",
+  logo: "/logo.svg",
   links: {
     twitter: "https://twitter.com/automateseo",
     github: "https://github.com/automateseo",
