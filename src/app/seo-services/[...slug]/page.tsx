@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Container, Section } from "@/components/site/container";
 import { CtaStrip } from "@/components/site/cta-strip";
+import { PageViewTracker } from "@/components/analytics/page-view-tracker";
 import { siteConfig } from "@/config/site";
 import { createWhatsAppLink } from "@/lib/utils";
 import { ukLocations, locationDisplayNames, seoServiceTypes, serviceDisplayNames } from "@/data/programmatic-seo";
@@ -119,6 +120,7 @@ export default function SeoServicesPage({ params }: PageProps) {
 
     return (
       <>
+        <PageViewTracker contentType="location-page" contentId={location} />
         <Section className="bg-gradient-to-b from-background to-muted/20">
           <Container>
             <div className="text-center space-y-8">
@@ -198,6 +200,7 @@ export default function SeoServicesPage({ params }: PageProps) {
 
     return (
       <>
+        <PageViewTracker contentType="service-location-page" contentId={`${service}-${location}`} />
         <Section className="bg-gradient-to-b from-background to-muted/20">
           <Container>
             <div className="text-center space-y-8">

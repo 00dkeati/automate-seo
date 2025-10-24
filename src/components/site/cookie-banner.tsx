@@ -69,3 +69,4 @@ export function CookieBanner({ onAccept, onDecline }: CookieBannerProps) {
   );
 }
 
+

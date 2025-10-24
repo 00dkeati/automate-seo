@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { trackLeadEvent } from "@/lib/facebook-conversions-api";
 
 const leadSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -61,6 +62,20 @@ Timestamp: ${new Date().toISOString()}
           subject: `New Lead: ${validatedData.business} - ${validatedData.town}`,
           text: emailContent,
         });
+        
+        // Track lead event in Facebook Conversions API
+        const userAgent = request.headers.get('user-agent') || undefined;
+        const forwardedFor = request.headers.get('x-forwarded-for');
+        const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : undefined;
+        
+        await trackLeadEvent(
+          request.url,
+          userAgent,
+          ipAddress,
+          validatedData.email,
+          validatedData.phone,
+          1000 // £1,000 service value
+        );
         
         console.log("Lead sent via Resend:", validatedData.email);
         return NextResponse.json({ ok: true, method: "resend" });
