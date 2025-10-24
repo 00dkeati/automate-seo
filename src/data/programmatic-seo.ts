@@ -476,6 +476,33 @@ export const serviceDisplayNames: Record<string, string> = {
   "engineering-seo": "Engineering SEO"
 };
 
+// Service comparison pairs for comparison pages
+export const serviceComparisonPairs = [
+  ["local-seo", "technical-seo"],
+  ["ecommerce-seo", "saas-seo"], 
+  ["content-seo", "technical-seo"],
+  ["lawyer-seo", "accountant-seo"],
+  ["restaurant-seo", "hotel-seo"],
+  ["fitness-seo", "beauty-seo"],
+  ["auto-repair-seo", "real-estate-seo"],
+  ["healthcare-seo", "education-seo"]
+];
+
+// FAQ keywords and display names
+export const faqKeywords = [
+  "faq", "questions", "answers", "help", "guide", "tips", "advice"
+];
+
+export const faqDisplayNames: Record<string, string> = {
+  "faq": "FAQ",
+  "questions": "Questions",
+  "answers": "Answers", 
+  "help": "Help",
+  "guide": "Guide",
+  "tips": "Tips",
+  "advice": "Advice"
+};
+
 // Generate all possible combinations for sitemap
 export function generateAllPages() {
   const pages: Array<{

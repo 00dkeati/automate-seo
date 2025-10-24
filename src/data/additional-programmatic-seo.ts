@@ -1,4 +1,9 @@
 // Additional programmatic SEO data for expanded coverage
+import { ukLocations, locationDisplayNames } from "./programmatic-seo";
+
+// Re-export the base data
+export { ukLocations, locationDisplayNames };
+
 export const competitorKeywords = [
   "seo-agency", "seo-company", "seo-expert", "seo-consultant", "seo-specialist",
   "digital-marketing", "online-marketing", "search-marketing", "google-ads",

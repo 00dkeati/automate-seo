@@ -9,7 +9,6 @@ import { PageViewTracker } from "@/components/analytics/page-view-tracker";
 import { siteConfig } from "@/config/site";
 import { createWhatsAppLink } from "@/lib/utils";
 import { ukLocations, locationDisplayNames, seoServiceTypes, serviceDisplayNames, faqKeywords, faqDisplayNames } from "@/data/programmatic-seo";
-import { faqKeywords as additionalFaqKeywords, faqDisplayNames as additionalFaqDisplayNames } from "@/data/additional-programmatic-seo";
 
 interface PageProps {
   params: {
@@ -54,8 +53,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const faq = slug[0];
-  const faqName = faqDisplayNames[faq as keyof typeof faqDisplayNames] || 
-                  additionalFaqDisplayNames[faq as keyof typeof additionalFaqDisplayNames];
+  const faqName = faqDisplayNames[faq as keyof typeof faqDisplayNames];
   
   if (slug.length === 2) {
     // FAQ + Location
@@ -121,8 +119,7 @@ export default function FAQPage({ params }: PageProps) {
   }
 
   const faq = slug[0];
-  const faqName = faqDisplayNames[faq as keyof typeof faqDisplayNames] || 
-                  additionalFaqDisplayNames[faq as keyof typeof additionalFaqDisplayNames];
+  const faqName = faqDisplayNames[faq as keyof typeof faqDisplayNames];
 
   if (!faqName) {
     notFound();
