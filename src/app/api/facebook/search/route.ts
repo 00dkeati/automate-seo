@@ -4,7 +4,7 @@ import { trackSearchEvent } from '@/lib/facebook-conversions-api';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { searchQuery, sourceUrl, email, phone } = body;
+    const { searchQuery, sourceUrl } = body;
 
     if (!searchQuery || !sourceUrl) {
       return NextResponse.json(

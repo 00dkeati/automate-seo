@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +7,7 @@ import { CtaStrip } from "@/components/site/cta-strip";
 import { PageViewTracker } from "@/components/analytics/page-view-tracker";
 import { siteConfig } from "@/config/site";
 import { createWhatsAppLink } from "@/lib/utils";
-import { ukLocations, locationDisplayNames, seoServiceTypes, serviceDisplayNames, serviceComparisonPairs } from "@/data/programmatic-seo";
+import { ukLocations, locationDisplayNames, serviceDisplayNames, serviceComparisonPairs } from "@/data/programmatic-seo";
 
 interface PageProps {
   params: {

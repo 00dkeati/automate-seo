@@ -1,8 +1,6 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Container, Section } from "@/components/site/container";
 import { CtaStrip } from "@/components/site/cta-strip";
 import { PageViewTracker } from "@/components/analytics/page-view-tracker";
@@ -189,10 +187,10 @@ export default function FAQPage({ params }: PageProps) {
                 </div>
 
                 <div className="border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-3">What if I'm not happy with the results?</h3>
+                  <h3 className="text-xl font-semibold mb-3">What if I&apos;m not happy with the results?</h3>
                   <p className="text-muted-foreground">
-                    We're confident in our approach. If you're not satisfied with the results after 30 days, 
-                    we'll refund your payment. No questions asked.
+                    We&apos;re confident in our approach. If you&apos;re not satisfied with the results after 30 days, 
+                    we&apos;ll refund your payment. No questions asked.
                   </p>
                 </div>
               </div>
@@ -266,7 +264,7 @@ export default function FAQPage({ params }: PageProps) {
                   <h3 className="text-xl font-semibold mb-3">How does {serviceName} work in {locationName}?</h3>
                   <p className="text-muted-foreground">
                     Our programmatic {serviceName.toLowerCase()} creates hundreds of targeted pages for every 
-                    "{serviceName.toLowerCase()} in {locationName}" search. This comprehensive approach ensures 
+                    &quot;{serviceName.toLowerCase()} in {locationName}&quot; search. This comprehensive approach ensures 
                     maximum visibility for your business.
                   </p>
                 </div>

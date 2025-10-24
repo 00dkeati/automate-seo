@@ -16,7 +16,7 @@ function generateEventId(): string {
 }
 
 // Base user data extraction
-function extractUserData(userAgent?: string, ipAddress?: string) {
+function extractUserData(userAgent?: string) {
   return {
     client_user_agent: userAgent || '',
     // Note: We don't hash client_user_agent as per Facebook's requirements
@@ -28,8 +28,8 @@ async function sendFacebookEvent(
   eventName: string,
   eventTime: number,
   sourceUrl: string,
-  userData: Record<string, any>,
-  customData?: Record<string, any>,
+  userData: Record<string, unknown>,
+  customData?: Record<string, unknown>,
   eventId?: string
 ) {
   if (!FACEBOOK_ACCESS_TOKEN || !FACEBOOK_PIXEL_ID) {
@@ -85,7 +85,7 @@ export async function trackSearchEvent(
   ipAddress?: string
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
-  const userData = extractUserData(userAgent, ipAddress);
+  const userData = extractUserData(userAgent);
 
   return sendFacebookEvent(
     'Search',
@@ -107,9 +107,9 @@ export async function trackViewContentEvent(
   contentId?: string
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
-  const userData = extractUserData(userAgent, ipAddress);
+  const userData = extractUserData(userAgent);
 
-  const customData: Record<string, any> = {
+  const customData: Record<string, unknown> = {
     content_type: contentType,
   };
 
@@ -136,7 +136,7 @@ export async function trackContactEvent(
   phone?: string
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
-  const userData = extractUserData(userAgent, ipAddress);
+  const userData = extractUserData(userAgent);
 
   // Hash email and phone if provided
   if (email) {
@@ -168,7 +168,7 @@ export async function trackLeadEvent(
   leadValue?: number
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
-  const userData = extractUserData(userAgent, ipAddress);
+  const userData = extractUserData(userAgent);
 
   // Hash email and phone if provided
   if (email) {
@@ -178,7 +178,7 @@ export async function trackLeadEvent(
     userData.ph = [hashData(phone)];
   }
 
-  const customData: Record<string, any> = {
+  const customData: Record<string, unknown> = {
     content_name: 'Programmatic SEO Lead',
     content_category: 'seo_services',
   };
@@ -208,7 +208,7 @@ export async function trackPurchaseEvent(
   phone?: string
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
-  const userData = extractUserData(userAgent, ipAddress);
+  const userData = extractUserData(userAgent);
 
   // Hash email and phone if provided
   if (email) {

@@ -1,8 +1,6 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Container, Section } from "@/components/site/container";
 import { CtaStrip } from "@/components/site/cta-strip";
 import { PageViewTracker } from "@/components/analytics/page-view-tracker";
@@ -129,7 +127,7 @@ export default function CompetitorLocationPage({ params }: PageProps) {
               Why Choose Us Over Traditional {competitorName} in {locationName}?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Most {competitorName.toLowerCase()} in {locationName} offer the same old approach: monthly fees, limited pages, and slow results. We're different.
+              Most {competitorName.toLowerCase()} in {locationName} offer the same old approach: monthly fees, limited pages, and slow results. We&apos;re different.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 text-left">
@@ -206,7 +204,7 @@ export default function CompetitorLocationPage({ params }: PageProps) {
                 </div>
                 <h3 className="text-xl font-semibold">Target Every Search</h3>
                 <p className="text-muted-foreground">
-                  We create pages for every "{service} in {locationName}" search your customers make.
+                  We create pages for every &quot;{service} in {locationName}&quot; search your customers make.
                 </p>
               </div>
               
@@ -216,7 +214,7 @@ export default function CompetitorLocationPage({ params }: PageProps) {
                 </div>
                 <h3 className="text-xl font-semibold">Dominate Results</h3>
                 <p className="text-muted-foreground">
-                  With 1,000+ pages, you'll appear multiple times on page 1 for every relevant search.
+                  With 1,000+ pages, you&apos;ll appear multiple times on page 1 for every relevant search.
                 </p>
               </div>
               

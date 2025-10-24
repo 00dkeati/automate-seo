@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { testFacebookEvent } from '@/lib/facebook-conversions-api';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const result = await testFacebookEvent();
     
