@@ -16,7 +16,7 @@ function generateEventId(): string {
 }
 
 // Base user data extraction
-function extractUserData(userAgent?: string) {
+function extractUserData(userAgent?: string): Record<string, unknown> {
   return {
     client_user_agent: userAgent || '',
     // Note: We don't hash client_user_agent as per Facebook's requirements
