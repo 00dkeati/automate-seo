@@ -29,7 +29,7 @@ export async function generateStaticParams() {
   });
 
   // FAQ + Location pages: /faq/seo-cost/london
-  additionalFaqKeywords.forEach((faq) => {
+  faqKeywords.forEach((faq) => {
     ukLocations.forEach((location) => {
       params.push({
         slug: [faq, location],

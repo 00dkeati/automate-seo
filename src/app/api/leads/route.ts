@@ -65,8 +65,6 @@ Timestamp: ${new Date().toISOString()}
         
         // Track lead event in Facebook Conversions API
         const userAgent = request.headers.get('user-agent') || undefined;
-        const forwardedFor = request.headers.get('x-forwarded-for');
-        const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : undefined;
         
         await trackLeadEvent(
           request.url,

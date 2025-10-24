@@ -13,10 +13,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Extract user agent and IP from request
+    // Extract user agent from request
     const userAgent = request.headers.get('user-agent') || undefined;
-    const forwardedFor = request.headers.get('x-forwarded-for');
-    const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : undefined;
 
     // Track the search event
     await trackSearchEvent(searchQuery, sourceUrl, userAgent);
