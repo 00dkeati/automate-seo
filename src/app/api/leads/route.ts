@@ -71,7 +71,6 @@ Timestamp: ${new Date().toISOString()}
         await trackLeadEvent(
           request.url,
           userAgent,
-          ipAddress,
           validatedData.email,
           validatedData.phone,
           1000 // £1,000 service value

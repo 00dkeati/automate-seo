@@ -204,7 +204,7 @@ export default function CompetitorLocationPage({ params }: PageProps) {
                 </div>
                 <h3 className="text-xl font-semibold">Target Every Search</h3>
                 <p className="text-muted-foreground">
-                  We create pages for every &quot;{service} in {locationName}&quot; search your customers make.
+                  We create pages for every &quot;service in {locationName}&quot; search your customers make.
                 </p>
               </div>
               

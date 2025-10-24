@@ -81,8 +81,7 @@ async function sendFacebookEvent(
 export async function trackSearchEvent(
   searchQuery: string,
   sourceUrl: string,
-  userAgent?: string,
-  ipAddress?: string
+  userAgent?: string
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
   const userData = extractUserData(userAgent);
@@ -103,7 +102,6 @@ export async function trackViewContentEvent(
   contentType: string,
   sourceUrl: string,
   userAgent?: string,
-  ipAddress?: string,
   contentId?: string
 ) {
   const eventTime = Math.floor(Date.now() / 1000);
@@ -131,7 +129,6 @@ export async function trackContactEvent(
   contactMethod: 'email' | 'whatsapp' | 'booking' | 'form',
   sourceUrl: string,
   userAgent?: string,
-  ipAddress?: string,
   email?: string,
   phone?: string
 ) {
@@ -162,7 +159,6 @@ export async function trackContactEvent(
 export async function trackLeadEvent(
   sourceUrl: string,
   userAgent?: string,
-  ipAddress?: string,
   email?: string,
   phone?: string,
   leadValue?: number
@@ -203,7 +199,6 @@ export async function trackPurchaseEvent(
   currency: string,
   sourceUrl: string,
   userAgent?: string,
-  ipAddress?: string,
   email?: string,
   phone?: string
 ) {

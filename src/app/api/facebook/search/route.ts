@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : undefined;
 
     // Track the search event
-    await trackSearchEvent(searchQuery, sourceUrl, userAgent, ipAddress);
+    await trackSearchEvent(searchQuery, sourceUrl, userAgent);
 
     return NextResponse.json({ success: true });
   } catch (error) {

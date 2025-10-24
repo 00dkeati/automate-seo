@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : undefined;
 
     // Track the contact event
-    await trackContactEvent(contactMethod, sourceUrl, userAgent, ipAddress, email, phone);
+    await trackContactEvent(contactMethod, sourceUrl, userAgent, email, phone);
 
     return NextResponse.json({ success: true });
   } catch (error) {

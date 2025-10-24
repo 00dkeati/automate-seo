@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : undefined;
 
     // Track the purchase event
-    await trackPurchaseEvent(value, currency, sourceUrl, userAgent, ipAddress, email, phone);
+    await trackPurchaseEvent(value, currency, sourceUrl, userAgent, email, phone);
 
     return NextResponse.json({ success: true });
   } catch (error) {
